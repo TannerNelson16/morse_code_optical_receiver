@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        #start-btn {
+            background-color: #1db954;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        #start-btn:hover {
+            background-color: #1aa34a;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        async function updateOutputs() {
+            const morseField = document.getElementById('morse');
+            const messageField = document.getElementById('translated');
+            setInterval(async () => {
+                const response = await fetch('/message');
+                const data = await response.json();
+                morseField.innerText = `Morse Code: ${data.morse || "Waiting..."}`;
+                messageField.innerText = `Translated Message: ${data.message || "Waiting..."}`;
+            }, 1000); // Update every second
+        }
+    </script>
+</head>
+<body onload="updateOutputs()">
+    <h1>Morse Code Reader</h1>
+    <div class="output" id="morse">Morse Code: Waiting...</div>
+    <div class="output" id="translated">Translated Message: Waiting...</div>
+</body>
+</html>
+
+
