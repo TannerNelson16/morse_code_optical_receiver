@@ -42,7 +42,7 @@
                 const data = await response.json();
                 morseField.innerText = `Morse Code: ${data.morse || "Waiting..."}`;
                 messageField.innerText = `Translated Message: ${data.message || "Waiting..."}`;
-            }, 1000); // Update every second
+            }, 200); // Update every second
         }
     </script>
 </head>
