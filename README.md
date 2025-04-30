@@ -1,2 +1,8 @@
-# morse_code_optical_receiver
-An optical receiver designed around the bpx61 photodiode that takes morse code pulses from a smart phone flash and outputs a voltage and ultimately a decoded message
+![Image Description](attachments/Fiber_Optical_Communication-1.png)
+![Image Description](attachments/Fiber_Optical_Communication-2.png)
+![Image Description](attachments/Fiber_Optical_Communication-3.png)
+![Image Description](attachments/Fiber_Optical_Communication-4.png)
+![Image Description](attachments/Fiber_Optical_Communication-5.png)
+![Image Description](attachments/Fiber_Optical_Communication-6.png)
+![Image Description](attachments/Fiber_Optical_Communication-7.png)
+![Image Description](attachments/Fiber_Optical_Communication-8.png)
